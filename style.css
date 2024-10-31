@@ -31,7 +31,62 @@ footer{
     padding: 1em;
 }
 
-footer p{
+body p{
     font-size: 1.2rem;
     color: var(--cor5)
 }
+ #caixa{
+    display: flex;
+ }
+
+ .cartao{
+    margin: 1rem;
+    background-color: var(--cor2);
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+}
+
+.cartao__conteudo{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out
+}
+.cartao__conteudo h3{
+    border: 2px solid var(--cor6);
+    font-family: var(--fonte-destaque);
+    text-align: center;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0,6rem;
+    border-radius: 0.6rem;
+    font-size: 1.5vw;
+    backface-visibility: hidden;
+}
+.cartao__conteudo__perguntas{
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+}
+.cartao__conteudo__perguntas
+.cartao__conteudo__respostas{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+         
+
+
+.cartao__conteudo p {
+    margin: 1rem;
+    padding: 1.3rem;
+}
+.cartao__conteudo__respostas{
+    font-size: 1.5rem;
+    transform: rotateY(180deg);
+}
+
