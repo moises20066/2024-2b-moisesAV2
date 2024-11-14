@@ -1,47 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Danfo&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-:root {
-    --fonte-destaque: "Kanit", sans-serif;
-    --fonte-texto: "Bebas Neue", sans-serif;
-    --cor1: #5f0f40ff;
-    --cor2: #9a031eff;
-    --cor3: #fb8b24ff;
-    --cor4: #e36414ff;
-    --cor5: #0f4c5cff;
-    --cor6: #6a4c93;
-
+:root{
+    --fonte-destaque: "Danfo", serif;
+    --fonte-texto: "Arima", serif;
+    --cor1: #ffa69eff;
+    --cor2: #faf3ddff;
+    --cor3: #b8f2e6ff;
+    --cor4: #aed9e0ff;
+    --cor5: #5e6472ff;
+    --cor6: #000000;
 }
 
-body {
-    background-color: var(--cor2)
+body{
+    background-color: var(--cor5);
     font-family: var(--fonte-texto);
 }
 
-footer{
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--cor3)
-    padding: 1em;
-}
-
-body p{
-    font-size: 1.2rem;
-    color: var(--cor5)
-}
- #caixa{
+#caixa{
     display: flex;
- }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 2rem;
+}
 
- .cartao{
+.cartao{
     margin: 1rem;
-    background-color: var(--cor2);
+    background-color: var(--cor3);
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
@@ -53,40 +43,64 @@ body p{
     display: flex;
     flex-direction: column;
     transform-style: preserve-3d;
-    transition: transform 300ms ease-in-out
+    transition: transform 300ms ease-in-out;
 }
+
+.cartao:hover .cartao__conteudo{
+    transform: rotateY(180deg);
+}
+
 .cartao__conteudo h3{
     border: 2px solid var(--cor6);
-    font-family: var(--fonte-destaque);
+    color: var(--cor5);
+    font-family: var(--fonte-texto);
     text-align: center;
     padding: 0.5rem;
     position: absolute;
-    margin: 0,6rem;
+    margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1.5vw;
     backface-visibility: hidden;
 }
-.cartao__conteudo__perguntas{
-    margin-top: 2.5rem;
+
+.cartao__conteudo__pergunta{
     font-size: 1.5rem;
+    margin: 2.5rem;
 }
-.cartao__conteudo__perguntas
-.cartao__conteudo__respostas{
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta{
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-         
-
-
 .cartao__conteudo p {
     margin: 1rem;
     padding: 1.3rem;
 }
-.cartao__conteudo__respostas{
+
+.cartao__conteudo__resposta{
     font-size: 1.5rem;
     transform: rotateY(180deg);
 }
 
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--cor1);
+    padding: 1em;
+}
+
+footer p{
+    font-size: 1.2rem;
+    color: var(--cor6);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--cor5);
+}
